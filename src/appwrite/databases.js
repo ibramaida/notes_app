@@ -22,10 +22,17 @@ collections.forEach((col) => {
         payload,
         permissions
       ),
-    update: (id) =>
-      databases.updateDocument(col.databaseId, col.id, id, payload),
+    update: (id, payload, permissions) =>
+      databases.updateDocument(
+        col.databaseId,
+        col.id,
+        id,
+        payload,
+        permissions
+      ),
     get: (id) => databases.getDocument(col.databaseId, col.id, id),
-    list: (queries = []) => databases.listDocuments(col.databaseId, col.id, queries),
+    list: (queries = []) =>
+      databases.listDocuments(col.databaseId, col.id, queries),
     delete: (id) => databases.deleteDocument(col.databaseId, col.id, id),
   };
 });
