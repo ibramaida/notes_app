@@ -16,8 +16,8 @@ const NoteForm = ({ setNotes }) => {
     }
   };
   return (
-    <form onSubmit={handleAdd}>
-      <input type="text" name="noteBody" placeholder="Enter your note" />
+    <form onSubmit={handleAdd} className="form">
+      <input className="input" type="text" name="noteBody" placeholder="Enter your note" />
     </form>
   );
 };
