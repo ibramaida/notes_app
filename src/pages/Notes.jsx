@@ -28,7 +28,7 @@ const Notes = () => {
     <NoteForm setNotes={setNotes} />
     <div className="notes">
       {notes.map((note) => (
-        <Note key={note.$id} noteData={note} />
+        <Note key={note.$id} noteData={note} setNotes={setNotes} />
       ))}
     </div>
     </div>

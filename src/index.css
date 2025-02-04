@@ -94,12 +94,13 @@ h1{
 }
 
 .form{
-    width: min(20rem, 100%);
+    width: min(30rem, 100%);
     margin-inline: auto;
 }
 
 .input{
     width: 100%;
+    height: 100%;
     padding: .5rem;
 }
 
@@ -112,6 +113,7 @@ h1{
 }
 
 .note{
+    /* max-width: 60ch; */
     background-color: rgb(48, 51, 50);
     padding: 1rem;
     display: grid;
@@ -123,6 +125,12 @@ h1{
     .note-del{
         color: rgb(209, 38, 38);
         cursor: pointer;
+        padding-inline-start: 1rem;
     }
+}
+
+s{
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgb(209, 38, 38);
 }
 
