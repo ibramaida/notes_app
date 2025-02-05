@@ -4,6 +4,7 @@ import { db } from "../appwrite/databases";
 import NoteForm from "../components/NoteForm";
 import { Query } from "appwrite";
 import Note from "../components/Note";
+import ThemeOption from "../components/ThemeOption";
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);
@@ -25,6 +26,11 @@ const Notes = () => {
   return (
     <div className="wrapper">
     <h1>Note App</h1>
+    <div className="theme-options">
+      <ThemeOption theme="light" />
+      <ThemeOption theme="dark" />
+      <ThemeOption theme="purple" />
+    </div>
     <NoteForm setNotes={setNotes} />
     <div className="notes">
       {notes.map((note) => (

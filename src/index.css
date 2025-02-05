@@ -81,6 +81,95 @@
 
 /* ################################################################## */
 
+
+:root{
+    --primary-background-color: #fff;
+    --secondary-background-color:#f7f7f7;
+    
+    --primary-text-color:#000;
+    --secondary-text-color:#4b4c53;
+  
+    --primary-border-color:#4b4c53;
+    
+  
+    --button-solid-background-color:#000;
+    --button-solid-text-color:#fff;
+  
+    --button-outlined-background-color:transparent;
+    --button-outlined-text-color:#000;
+  
+    --alert-color:#FFF9E7;
+    --alert-border-color:#FFBF00;
+    --alert-text-color:#b8952f;
+}
+
+[data-theme="dark"]{
+    --primary-background-color: #1f2028;
+    --secondary-background-color:#2e3039;
+  
+    --primary-text-color:rgba(255, 255, 255, 0.87);
+    --secondary-text-color:#4b4c53;
+  
+    --primary-border-color:#4b4c53;
+  
+    --button-solid-background-color:#fff;
+    --button-solid-text-color:#000;
+  
+    --button-outlined-background-color:transparent;
+    --button-outlined-text-color:#fff;
+  
+  }
+
+  [data-theme="purple"]{
+    --primary-background-color: rgba(24, 16, 40, 1);
+    --secondary-background-color:rgba(44, 36, 70, 1);
+  
+    --primary-text-color:rgba(255, 255, 255, 0.87);
+    --secondary-text-color:#8549a7;
+  
+    --primary-border-color:#8549a7;
+  
+    --button-solid-background-color:#fff;
+    --button-solid-text-color:#000;
+  
+    --button-outlined-background-color:transparent;
+    --button-outlined-text-color:#fff;
+  
+  }
+
+  .theme-options{
+    display: flex;
+    gap:10px;
+  }
+  
+  .theme-option{
+    height: 25px;
+    width: 25px;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  #theme-dark{
+    background-color: #000;
+    border-color: #fff;
+  }
+
+  #theme-light{
+    background-color: #fff;
+    border-color: #000;
+  }
+
+  #theme-purple{
+    background-color: #954ebe;
+    border-color: #954ebe;
+  }
+
+  body {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+  }
+
 .wrapper{
     width: min(60rem, 100% - 2rem);
     margin-inline: auto;
@@ -102,6 +191,15 @@ h1{
     width: 100%;
     height: 100%;
     padding: .5rem;
+    border: 1px solid transparent;
+    background-color: var(--secondary-background-color);
+    color: inherit;
+    outline: none;
+    &:focus{
+    border: 1px solid var(--primary-border-color);
+
+    }
+    
 }
 
 .notes{
@@ -114,7 +212,7 @@ h1{
 
 .note{
     /* max-width: 60ch; */
-    background-color: rgb(48, 51, 50);
+    background-color: var(--secondary-background-color);
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr auto;
