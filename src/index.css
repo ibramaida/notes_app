@@ -232,3 +232,35 @@ s{
     text-decoration-color: rgb(209, 38, 38);
 }
 
+
+
+.login-reg-wrapper {
+    width: min(25rem, 100% - 2rem);
+    margin: auto;
+    margin-top: 5rem;
+
+    h1 {
+        margin-bottom: 3rem;
+    }
+}
+.login-reg-form{
+    /* border: 1px solid var(--primary-border-color); */
+    display: grid;
+    gap: 1rem;
+
+    .field-wrapper{
+        display: grid;
+    }
+}
+
+.app-header{
+    background-color: var(--secondary-background-color);
+    padding-block: 2rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
