@@ -5,6 +5,7 @@ import NoteForm from "../components/NoteForm";
 import { Query } from "appwrite";
 import Note from "../components/Note";
 import ThemeOption from "../components/ThemeOption";
+import Header from "../components/Header";
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);
@@ -24,20 +25,23 @@ const Notes = () => {
   };
 
   return (
-    <div className="wrapper">
-    <h1>Note App</h1>
-    <div className="theme-options">
-      <ThemeOption theme="light" />
-      <ThemeOption theme="dark" />
-      <ThemeOption theme="purple" />
-    </div>
-    <NoteForm setNotes={setNotes} />
-    <div className="notes">
-      {notes.map((note) => (
-        <Note key={note.$id} noteData={note} setNotes={setNotes} />
-      ))}
-    </div>
-    </div>
+    <>
+    <Header />
+      <div className="wrapper">
+      <h1>Note App</h1>
+      <div className="theme-options">
+        <ThemeOption theme="light" />
+        <ThemeOption theme="dark" />
+        <ThemeOption theme="purple" />
+      </div>
+      <NoteForm setNotes={setNotes} />
+      <div className="notes">
+        {notes.map((note) => (
+          <Note key={note.$id} noteData={note} setNotes={setNotes} />
+        ))}
+      </div>
+      </div>
+    </>
   );
 };
 
