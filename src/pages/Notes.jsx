@@ -26,12 +26,7 @@ const Notes = () => {
     <>
     <Header />
       <div className="wrapper">
-      <h1>Note App</h1>
-      <div className="theme-options">
-        <ThemeOption theme="light" />
-        <ThemeOption theme="dark" />
-        <ThemeOption theme="purple" />
-      </div>
+      <h1 className="heading">Note App</h1>
       <NoteForm setNotes={setNotes} />
       <div className="notes">
         {notes.map((note) => (

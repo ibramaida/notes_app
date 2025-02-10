@@ -178,8 +178,9 @@
     gap: 1rem;
 }
 
-h1{
+.heading{
     text-align: center;
+    margin-block: 2rem;
 }
 
 .form{
@@ -192,6 +193,7 @@ h1{
     height: 100%;
     padding: .5rem;
     border: 1px solid transparent;
+    border-radius: 4px;
     background-color: var(--secondary-background-color);
     color: inherit;
     outline: none;
@@ -216,6 +218,7 @@ h1{
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr auto;
+    border-radius: 8px;
 
     .note-body {
         cursor: pointer;
@@ -235,9 +238,13 @@ s{
 
 
 .login-reg-wrapper {
+    /* border: 1px solid red; */
     width: min(25rem, 100% - 2rem);
     margin: auto;
     margin-top: 5rem;
+    padding: 2rem 1rem;
+    background-color: var(--secondary-background-color);
+    border-radius: 8px;
 
     h1 {
         margin-bottom: 3rem;
@@ -251,6 +258,23 @@ s{
     .field-wrapper{
         display: grid;
     }
+
+    input{
+        background: var(--primary-background-color);
+        border: 0;
+        padding: .5rem;
+        border-radius: 4px;
+    }
+    input[type="submit"]{
+        margin-top: 1.5rem;
+        cursor: pointer;
+        outline: 1px solid transparent;
+        transition: all 150ms;
+    }
+}
+
+input[type="submit"]:is(:hover, :focus-visible) {
+    outline: 1px solid var(--primary-border-color);
 }
 
 .app-header{
@@ -262,5 +286,34 @@ s{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.logout-btn{
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+    background-color: var(--primary-background-color);
+    border: 0;
+    padding: .25rem .5rem;
+    border-radius: 4px;
+    outline: 1px solid transparent;
+    transition: all 150ms;
+    cursor: pointer;
+    color: var(--primary-text-color);
+
+
+
+    .icon-wrapper{
+        display: grid;
+        place-items: center;
+    }
+
+    svg{
+       height: 1cap;
+    }
+}
+
+.logout-btn:is(:hover, :focus-visible) {
+    outline: 1px solid var(--primary-border-color);
 }
 
