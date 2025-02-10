@@ -1,4 +1,3 @@
-// import { client, databases, DATABASE_ID, COLLECTION_ID } from "./appwrite";
 import { databases } from "./config";
 import { ID } from "appwrite";
 

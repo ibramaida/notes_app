@@ -2,6 +2,7 @@ import React from "react";
 import { db } from "../appwrite/databases";
 
 const NoteForm = ({ setNotes }) => {
+
   const handleAdd = async (e) => {
     e.preventDefault();
     const noteBody = e.target.noteBody.value;
