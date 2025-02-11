@@ -24,15 +24,15 @@ const Notes = () => {
 
   return (
     <>
-    <Header />
+      <Header />
       <div className="wrapper">
-      <h1 className="heading">Note App</h1>
-      <NoteForm setNotes={setNotes} />
-      <div className="notes">
-        {notes.map((note) => (
-          <Note key={note.$id} noteData={note} setNotes={setNotes} />
-        ))}
-      </div>
+        <h1 className="heading">Note App</h1>
+        <NoteForm setNotes={setNotes} />
+        <div className="notes">
+          {notes.map((note) => (
+            <Note key={note.$id} noteData={note} setNotes={setNotes} />
+          ))}
+        </div>
       </div>
     </>
   );

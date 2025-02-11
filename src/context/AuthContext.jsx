@@ -25,6 +25,7 @@ export const AuthProvider = ({children}) => {
             return userData
         } catch (error) {
             console.error(error)
+            
             return null
         }
     }
@@ -38,6 +39,7 @@ export const AuthProvider = ({children}) => {
             
         } catch (error) {
             console.error(error)
+            alert(error.message)
         }
         setLoading(false)
     }
@@ -49,11 +51,8 @@ export const AuthProvider = ({children}) => {
 
     const registerUser = async (userInfo) => {
         setLoading(true)
-
-        try{
-            
-            let response = await account.create(ID.unique(), userInfo.email, userInfo.password1, userInfo.name);
-    
+       try{          
+            let response = await account.create(ID.unique(), userInfo.email, userInfo.password1, userInfo.name);  
             await account.createEmailPasswordSession(userInfo.email, userInfo.password1)
             let accountDetails = await account.get();
             setUser(accountDetails)
@@ -61,8 +60,7 @@ export const AuthProvider = ({children}) => {
         }catch(error){
             console.error(error)
         }
-    
-        setLoading(false)
+           setLoading(false)
      }
 
 
